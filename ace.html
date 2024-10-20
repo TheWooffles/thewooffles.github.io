@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Synapse Editor</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico">
+    <style>
+        body,
+        html {
+            width: auto;
+            height: 100%;
+            margin: 0;
+            background-color: #0000;
+        }
+
+        html {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            color: rgb(255, 255, 255);
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+
+        #editor {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .ace-tomorrow-night .ace_gutter {
+            color: #C5C8C6;
+        }
+        .ace_search {
+            background-color: #2d2d2d;
+            color: #cdcdcd;
+            border: 1px solid #272727;
+        }
+        .ace_search_field {
+            border-radius: 3px 0 0 3px;
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #272727;
+        }
+        .ace_searchbtn {
+            background-color: transparent;
+            border: 1px solid #272727;
+            border-left: 1px solid #272727;
+            color: #cdcdcd;
+            border-right: 0px;
+        }
+        .ace_searchbtn:hover {
+            background-color: #3b3b3b;
+        }
+        .ace_button:hover {
+            background-color: #3b3b3b;
+        }
+        .ace_button {
+            color: #cdcdcd;
+        }
+        .ace-tomorrow-night-eighties {
+            background-color: #4f3a3a00;
+            color: #CCCCCC;
+        }
+        .ace-tomorrow-night-eighties .ace_gutter {
+            background: #272727b7;
+            color: #CCC;
+        }
+        .ace-tomorrow-night-eighties .ace_marker-layer .ace_active-line {
+            background: #39393994;
+        }
+        .ace-tomorrow-night-eighties .ace_gutter-active-line {
+            background-color: #39393994;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.31.2/ace.min.js"
+        integrity="sha512-4qIbBlcJOvbOmEB50FfnviJ9jOCen2yhi4skodkbTLU/uJJdULPxlX2R9Enf1oOBleUK9KD3fGmMcnItFQdNeA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.31.2/ext-language_tools.min.js"
+        integrity="sha512-O2P4Md+JYJDtDMVY4rnpX1TaZC3axbHnNDIK0ppq05mRYXSmwxo1cjsmm7gsjgVAsudJqSr9qJ1nmktzdDLTIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div id="editor"></div>
+    <script>
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/tomorrow_night_eighties");
+        editor.session.setMode("ace/mode/lua");
+        editor.setOptions({
+            enableBasicAutocompletion: true,
+            enableSnippets: true,
+            enableLiveAutocompletion: true
+        });
+    </script>
+</body>
+</html>
