@@ -3,8 +3,6 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<title>Signal Editor</title>
-    <link rel="shortcut icon" type="image/png" href="/favicon.ico">
 	<style type="text/css">
 		:root {
 			--url: url("");
@@ -182,14 +180,14 @@
 				});
 
 				editor = monaco.editor.create(document.getElementById('container'), {
-					value: '-- orca debug ui',
+					value: '-- Signal IDE',
 					language: 'lua',
 					theme: "Dark",
 					folding: true,
 					dragAndDrop: true,
 					links: true,
 					minimap: {
-						enabled: false,
+						enabled: true,
 					},
 					showFoldingControls: "always",
 					smoothScrolling: true,
